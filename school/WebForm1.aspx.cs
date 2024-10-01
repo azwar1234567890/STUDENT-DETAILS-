@@ -31,6 +31,7 @@ namespace school
                 cmd.ExecuteNonQuery();
                 con.Close();
                 display();
+                clear();
             }
             else if (txtsubmit.Text == "Update")
             {
@@ -44,8 +45,18 @@ namespace school
                 cmd.ExecuteNonQuery();
                 con.Close();
                 display();
+                clear();
             }
         }
+
+        
+         public void clear()
+         {
+             txtname.Text = string.Empty;
+             txtsubject.Text = string.Empty;
+             txtClass.Text = string.Empty;
+         }
+         
 
         public void display()
         {
